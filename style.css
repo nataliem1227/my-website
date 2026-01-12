@@ -1,0 +1,525 @@
+/* This removes default spacing from everything */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- BODY ----- */
+/* The main container for your whole page */
+body {
+    background-color: #0D0D0D;
+    color: #1fbcc2;
+    /* Using San Francisco (Apple's iOS font) */
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+/* ----- NAVIGATION BAR ----- */
+nav {
+    background-color: #0D0D0D;
+    border-bottom: 3px solid #1fbcc2;
+    padding: 20px 0;
+    position: sticky;      /* Makes nav stick to top when scrolling */
+    top: 0;
+    z-index: 100;         /* Keeps it above other content */
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;       /* Centers the nav content */
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;  /* Puts logo on left, links on right */
+    align-items: center;
+}
+
+/* LOGO - NM in circle mascot style */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-circle {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #1fbcc2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: #1fbcc2;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.logo-circle:hover {
+    background-color: #1fbcc2;
+    color: #0D0D0D;
+    transform: rotate(360deg);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;           /* Space between links */
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;     /* Removes underline */
+    font-weight: 500;
+    transition: color 0.3s;    /* Smooth color change */
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.nav-links a:hover {
+    color: #1fbcc2;
+}
+
+/* ----- HERO SECTION ----- */
+/* The big welcome section at the top */
+.hero {
+    min-height: 100vh;          /* Takes up full screen height */
+    display: flex;
+    align-items: center;        /* Centers content vertically */
+    justify-content: center;    /* Centers content horizontally */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Add cyberpunk corner brackets to hero */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-top: 3px solid #1fbcc2;
+    border-left: 3px solid #1fbcc2;
+    opacity: 0.5;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-bottom: 3px solid #1fbcc2;
+    border-right: 3px solid #1fbcc2;
+    opacity: 0.5;
+}
+
+.hero-content {
+    max-width: 800px;
+    background-color: #1A1A1A;
+    border: 2px solid #1fbcc2;
+    border-radius: 8px;
+    padding: 60px 40px;
+    position: relative;
+}
+
+/* Cyberpunk corner brackets - top left */
+.hero-content::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 40px;
+    height: 40px;
+    border-top: 5px solid #1fbcc2;
+    border-left: 5px solid #1fbcc2;
+}
+
+/* Top right corner bracket */
+.corner-tr {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 40px;
+    height: 40px;
+    border-top: 5px solid #1fbcc2;
+    border-right: 5px solid #1fbcc2;
+}
+
+/* Bottom right corner bracket */
+.corner-br {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 40px;
+    height: 40px;
+    border-bottom: 5px solid #1fbcc2;
+    border-right: 5px solid #1fbcc2;
+}
+
+/* Bottom left corner bracket */
+.corner-bl {
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+    width: 40px;
+    height: 40px;
+    border-bottom: 5px solid #1fbcc2;
+    border-left: 5px solid #1fbcc2;
+}
+
+.glitch-text {
+    /* Using SF Pro (Apple's iOS font) */
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+    font-size: 80px;
+    font-weight: 50;
+    color: #1fbcc2;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);    /* Drop shadow effect */
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #B0B0B0;
+    margin-bottom: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #1fbcc2;
+    color: #0D0D0D;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid #1fbcc2;
+    transition: all 0.3s;       /* Smooth transition for hover */
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: #1fbcc2;
+}
+
+/* ----- SECTIONS ----- */
+/* General styling for all sections (about, projects, contact) */
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    position: relative;
+}
+
+/* Add top border line with corner brackets */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #1fbcc2 10%, 
+        #1fbcc2 90%, 
+        transparent 100%);
+    opacity: 0.3;
+}
+
+.section-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+    font-size: 36px;
+    color: #1fbcc2;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Add corner bracket to section title */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #1fbcc2;
+}
+
+/* ----- ABOUT SECTION ----- */
+.about-content {
+    max-width: 800px;
+}
+
+.about-content p {
+    color: #B0B0B0;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+/* ----- PROJECTS GRID ----- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Responsive columns */
+    gap: 30px;             /* Space between cards */
+    margin-top: 40px;
+}
+
+/* ----- PROJECT CARD ----- */
+.project-card {
+    background-color: #1A1A1A;
+    border: 2px solid #1fbcc2;
+    padding: 30px;
+    transition: transform 0.3s;
+    position: relative;  /* Needed for corner elements */
+}
+
+/* Cyberpunk corner brackets - top left */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid #1fbcc2;
+    border-left: 3px solid #1fbcc2;
+}
+
+/* Cyberpunk corner brackets - top right */
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid #1fbcc2;
+    border-right: 3px solid #1fbcc2;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(31, 188, 194, 0.3);  /* Glow effect on hover */
+}
+
+.project-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+    color: #1fbcc2;
+    font-size: 24px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Add bottom right corner bracket using description pseudo element */
+.project-card .project-links::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid #1fbcc2;
+    border-right: 3px solid #1fbcc2;
+}
+
+.project-description {
+    color: #B0B0B0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+/* ----- TECH TAGS ----- */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;       /* Wraps to next line if needed */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.project-tech span {
+    background-color: #0D0D0D;
+    color: #1fbcc2;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: 1px solid #1fbcc2;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+    position: relative;
+}
+
+/* Add small corner brackets to tech tags */
+.project-tech span::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #1fbcc2;
+    border-left: 1px solid #1fbcc2;
+}
+
+.project-tech span::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 6px;
+    height: 6px;
+    border-bottom: 1px solid #1fbcc2;
+    border-right: 1px solid #1fbcc2;
+}
+
+/* ----- PROJECT ID (Code label) ----- */
+.project-id {
+    font-size: 12px;
+    color: #1fbcc2;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+/* ----- PROJECT LINKS ----- */
+.project-links {
+    display: flex;
+    gap: 20px;
+}
+
+.project-links a {
+    color: #1fbcc2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.project-links a:hover {
+    color: #189FA4;
+}
+
+/* ----- CONTACT SECTION ----- */
+.contact-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content p {
+    font-size: 20px;
+    color: #B0B0B0;
+    margin-bottom: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #1fbcc2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 25px;
+    border: 2px solid #1fbcc2;
+    transition: all 0.3s;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.social-links a:hover {
+    background-color: #1fbcc2;
+    color: #0D0D0D;
+}
+
+/* ----- FOOTER ----- */
+footer {
+    background-color: #0D0D0D;
+    border-top: 3px solid #1fbcc2;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+    position: relative;
+}
+
+footer p {
+    color: #B0B0B0;
+    margin: 5px 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+.credits {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.credits a {
+    color: #1fbcc2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.credits a:hover {
+    color: #189FA4;
+    text-decoration: underline;
+}
+
+/* ----- RESPONSIVE DESIGN ----- */
+/* Makes the site look good on phones and tablets */
+@media (max-width: 768px) {
+    .glitch-text {
+        font-size: 50px;    /* Smaller text on mobile */
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;  /* Single column on mobile */
+    }
+}
+
+/* ----- SMOOTH SCROLLING ----- */
+/* Makes clicking nav links scroll smoothly */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----- OPTIONAL: CYBERPUNK SCAN LINE EFFECT ----- */
+/* Cyberpunk scan lines across the page */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(31, 188, 194, 0.03) 0px,
+        transparent 1px,
+        transparent 2px,
+        rgba(31, 188, 194, 0.03) 3px
+    );
+    z-index: 9999;
+}
