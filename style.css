@@ -181,6 +181,12 @@ nav {
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);    /* Drop shadow effect */
 }
 
+.glitch-text i {
+    display: inline-block;
+    font-style: normal;
+    margin-right: 15px;
+}
+
 .subtitle {
     font-size: 20px;
     color: #B0B0B0;
@@ -498,14 +504,12 @@ footer p {
     }
 }
 
-/* ----- SMOOTH SCROLLING ----- */
-/* Makes clicking nav links scroll smoothly */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* ----- OPTIONAL: CYBERPUNK SCAN LINE EFFECT ----- */
-/* Cyberpunk scan lines across the page */
+/* scan line effect */
 body::before {
     content: '';
     position: fixed;
