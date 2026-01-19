@@ -11,25 +11,31 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
     "SF Pro Text", system-ui, sans-serif;
   line-height: 1.6;
+  display: flex;
 }
 
-/* ----- NAV BAR ----- */
-nav {
-  background-color: #0d0d0d;
-  border-bottom: 3px solid #1fbcc2;
-  padding: 20px 0;
-  position: sticky;
+/* ----- SIDE NAVIGATION BAR ----- */
+.side-nav {
+  position: fixed;
+  left: 0;
   top: 0;
+  height: 100vh;
+  width: 200px;
+  background-color: #0d0d0d;
+  border-right: 3px solid #1fbcc2;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-content {
-  max-width: 1200px;
-  margin: 0 auto; /* Centers the nav content */
-  padding: 0 20px;
   display: flex;
-  justify-content: space-between; /* Puts logo on left, links on right */
+  flex-direction: column;
   align-items: center;
+  gap: 60px;
+  width: 100%;
+  padding: 40px 20px;
 }
 
 .logo {
@@ -38,8 +44,8 @@ nav {
 }
 
 .logo-circle {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border: 3px solid #1fbcc2;
   border-radius: 50%;
   display: flex;
@@ -47,11 +53,12 @@ nav {
   justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui,
     sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 900;
   color: #1fbcc2;
   letter-spacing: 1px;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .logo-circle:hover {
@@ -62,28 +69,63 @@ nav {
 
 .nav-links {
   display: flex;
+  flex-direction: column;
   gap: 30px;
+  align-items: center;
+  width: 100%;
 }
 
 .nav-links a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  font-size: 16px;
+  transition: all 0.3s;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui,
     sans-serif;
+  position: relative;
+  padding: 10px 20px;
+  text-align: center;
 }
 
 .nav-links a:hover {
   color: #1fbcc2;
 }
 
+.nav-links a.active {
+  color: #1fbcc2;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #1fbcc2;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 80%;
+}
+
+/* ----- MAIN CONTENT AREA ----- */
+.main-content {
+  margin-left: 200px;
+  width: calc(100% - 200px);
+  min-height: 100vh;
+}
+
 /* ----- HERO SECTION ----- */
 .hero {
-  min-height: 100vh; /* Takes up full screen height */
+  min-height: 100vh;
   display: flex;
-  align-items: center; /* Centers content vertically */
-  justify-content: center; /* Centers content horizontally */
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 20px;
   position: relative;
@@ -169,7 +211,6 @@ nav {
 }
 
 .glitch-text {
-  /* Using SF Pro (Apple's iOS font) */
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui,
     sans-serif;
   font-size: 80px;
@@ -203,7 +244,7 @@ nav {
   font-weight: 700;
   text-transform: uppercase;
   border: 3px solid #1fbcc2;
-  transition: all 0.3s; /* Smooth transition for hover */
+  transition: all 0.3s;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui,
     sans-serif;
 }
@@ -215,10 +256,15 @@ nav {
 
 /* ----- SECTIONS ----- */
 .section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 80px 40px;
   position: relative;
+  scroll-margin-top: 0;
 }
 
 /* Add top border line with corner brackets */
@@ -277,11 +323,8 @@ nav {
 /* ----- PROJECTS GRID ----- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Responsive columns */
-  gap: 30px; /* Space between cards */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   margin-top: 40px;
 }
 
@@ -291,7 +334,7 @@ nav {
   border: 2px solid #1fbcc2;
   padding: 30px;
   transition: transform 0.3s;
-  position: relative; /* Needed for corner elements */
+  position: relative;
 }
 
 /* Cyberpunk corner brackets - top left */
@@ -320,7 +363,7 @@ nav {
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(31, 188, 194, 0.3); /* Glow effect on hover */
+  box-shadow: 0 0 20px rgba(31, 188, 194, 0.3);
 }
 
 .project-title {
@@ -357,7 +400,7 @@ nav {
 /* ----- TECH TAGS ----- */
 .project-tech {
   display: flex;
-  flex-wrap: wrap; /* Wraps to next line if needed */
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -472,7 +515,7 @@ footer {
   border-top: 3px solid #1fbcc2;
   text-align: center;
   padding: 30px 20px;
-  margin-top: 80px;
+  margin-top: 0;
   position: relative;
 }
 
@@ -502,12 +545,51 @@ footer p {
 /* ----- RESPONSIVE DESIGN ----- */
 
 @media (max-width: 768px) {
-  .glitch-text {
-    font-size: 50px; /* Smaller text on mobile */
+  body {
+    flex-direction: column;
+  }
+
+  .side-nav {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 3px solid #1fbcc2;
+    top: 0;
+    left: 0;
+  }
+
+  .nav-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+    gap: 20px;
   }
 
   .nav-links {
-    gap: 15px;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .logo-circle {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  .glitch-text {
+    font-size: 50px;
   }
 
   .section-title {
@@ -515,7 +597,11 @@ footer p {
   }
 
   .projects-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 60px 20px;
   }
 }
 
@@ -541,6 +627,7 @@ body::before {
   );
   z-index: 9999;
 }
+
 /* Medal badge for hackathon wins */
 .medal-badge {
   position: absolute;
