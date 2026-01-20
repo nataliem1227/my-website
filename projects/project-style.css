@@ -587,3 +587,24 @@ body::before {
     border-width: 3px;
   }
 }
+
+/* ----- PROJECT DETAIL PAGE LISTS ----- */
+.project-section h3 {
+  color: #1fbcc2;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.project-section ul {
+  color: #b0b0b0;
+  margin-left: 20px;
+  line-height: 1.8;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.project-section ul li {
+  padding: 10px 0;
+}
