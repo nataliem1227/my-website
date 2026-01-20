@@ -252,19 +252,6 @@ body::before {
   max-width: 900px;
 }
 
-.back-link {
-  display: inline-block;
-  color: #1fbcc2;
-  text-decoration: none;
-  font-size: 16px;
-  margin-bottom: 30px;
-  transition: color 0.3s;
-}
-
-.back-link:hover {
-  color: #2dddea;
-}
-
 .project-header {
   margin-bottom: 60px;
   background-color: #1a1a1a;
@@ -272,6 +259,32 @@ body::before {
   border-radius: 8px;
   padding: 40px;
   position: relative;
+}
+
+.project-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.project-header-text {
+  flex: 1;
+}
+
+.project-header-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.project-header-logo img {
+  max-width: 200px;
+  height: auto;
+  border: 3px solid #1fbcc2;
+  cursor: default;
 }
 
 /* Cyberpunk corner brackets for project header */
@@ -342,6 +355,72 @@ body::before {
   color: #b0b0b0;
 }
 
+.project-section h3 {
+  color: #1fbcc2;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.project-section ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.achievement-container {
+  background-color: rgba(31, 188, 194, 0.05);
+  border-left: 4px solid #1fbcc2;
+  padding: 20px 25px;
+  margin: 30px 0;
+}
+
+.achievement-title {
+  color: #1fbcc2;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: sans-serif;
+}
+
+.achievement-award {
+  color: #1fbcc2;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.achievement-description {
+  font-size: 18px;
+  color: #b0b0b0;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.achievement-event {
+  font-size: 18px;
+  color: #b0b0b0;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+}
+
+.achievement-event strong {
+  color: #1fbcc2;
+}
+
+.achievement-highlights {
+  margin: 15px 0 0 20px;
+}
+
+.achievement-highlights li {
+  color: #b0b0b0;
+  font-size: 18px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
 /* ----- IMAGE GALLERY ----- */
 .image-gallery {
   margin: 40px 0;
@@ -351,72 +430,6 @@ body::before {
   font-size: 18px;
   margin-bottom: 20px;
   color: #b0b0b0;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.gallery-item {
-  background-color: #1a1a1a;
-  border: 2px solid #1fbcc2;
-  padding: 15px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-/* Cyberpunk corner brackets for gallery items */
-.gallery-item::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  width: 20px;
-  height: 20px;
-  border-top: 3px solid #1fbcc2;
-  border-left: 3px solid #1fbcc2;
-}
-
-.gallery-item::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  width: 20px;
-  height: 20px;
-  border-top: 3px solid #1fbcc2;
-  border-right: 3px solid #1fbcc2;
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(31, 188, 194, 0.4);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: 1px solid rgba(31, 188, 194, 0.3);
-}
-
-/* Landscape styling for web workflow images */
-.gallery-item:has(img[alt*="Web Workflow"]) {
-  grid-column: span 2;
-}
-
-.gallery-caption {
-  color: #b0b0b0;
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 /* Large featured image */
@@ -516,49 +529,12 @@ body::before {
   font-family: sans-serif;
 }
 
-.feature-list {
-  list-style: none;
-  padding: 0;
-}
-
-.feature-list li {
-  padding: 15px 0;
-  border-bottom: 1px solid rgba(31, 188, 194, 0.2);
-  color: #b0b0b0;
-  font-size: 18px;
-}
-
-.feature-list li:before {
-  content: "▹ ";
-  color: #1fbcc2;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
 .project-links-detail {
   display: flex;
   gap: 20px;
   margin-top: 50px;
   flex-wrap: wrap;
-}
-
-.project-link-btn {
-  display: inline-block;
-  background-color: transparent;
-  color: #1fbcc2;
-  padding: 15px 40px;
-  text-decoration: none;
-  font-weight: 700;
-  text-transform: uppercase;
-  border: 3px solid #1fbcc2;
-  transition: all 0.3s;
-  font-family: sans-serif;
-  font-size: 14px;
-}
-
-.project-link-btn:hover {
-  background-color: #1fbcc2;
-  color: #0d0d0d;
+  justify-content: center;
 }
 
 /* ----- RESPONSIVE DESIGN ----- */
@@ -583,16 +559,17 @@ body::before {
     font-size: 16px;
   }
 
-  .feature-list li {
-    font-size: 16px;
-  }
-
   .project-header {
     padding: 30px 20px;
   }
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
+  .project-header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-header-logo img {
+    max-width: 150px;
   }
 
   .image-row {
@@ -610,14 +587,6 @@ body::before {
 }
 
 /* ----- PROJECT DETAIL PAGE LISTS ----- */
-.project-section h3 {
-  color: #1fbcc2;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-size: 20px;
-  font-family: sans-serif;
-}
-
 .project-section ul {
   color: #b0b0b0;
   margin-left: 20px;
