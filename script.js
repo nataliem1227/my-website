@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     
     // Typing animation for hero text
@@ -27,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Start typing after a short delay
         setTimeout(typeText, 500);
     }
+
     
     // Smooth scroll for navigation links with proper centering
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
@@ -67,14 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Observe all sections and cards
+    // Observe all sections and cards (but exclude hero section)
     const animatedElements = document.querySelectorAll('.section, .project-card, .skill-category');
     
     animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+        // Don't animate the hero section or elements inside it
+        if (!el.closest('.hero')) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        }
     });
 
     // Add active state to navigation on scroll

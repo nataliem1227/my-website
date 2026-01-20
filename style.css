@@ -67,6 +67,7 @@ nav {
 .nav-links {
   display: flex;
   gap: 30px;
+  align-items: center;
 }
 
 .nav-links a {
@@ -81,40 +82,104 @@ nav {
   color: #1fbcc2;
 }
 
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 10px;
+  display: none;
+}
+
+.dropdown:hover::before {
+  display: block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-family: sans-serif;
+}
+
+.dropdown-toggle:hover {
+  color: #1fbcc2;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1a1a1a;
+  border: 2px solid #1fbcc2;
+  min-width: 200px;
+  z-index: 1000;
+  margin-top: 0;
+  padding: 10px 0;
+  padding-top: 15px;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #1fbcc2;
+  border-left: 2px solid #1fbcc2;
+}
+
+.dropdown-menu::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 15px;
+  height: 15px;
+  border-bottom: 2px solid #1fbcc2;
+  border-right: 2px solid #1fbcc2;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #1fbcc2;
+  text-decoration: none;
+  transition: background-color 0.3s, padding-left 0.3s;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(31, 188, 194, 0.1);
+  padding-left: 20px;
+}
+
 /* ----- HERO SECTION ----- */
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 20px;
   position: relative;
-}
-
-/* Add cyberpunk corner brackets to hero */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 60px;
-  height: 60px;
-  border-top: 3px solid #1fbcc2;
-  border-left: 3px solid #1fbcc2;
-  opacity: 0.5;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  border-bottom: 3px solid #1fbcc2;
-  border-right: 3px solid #1fbcc2;
-  opacity: 0.5;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -130,6 +195,8 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 /* Cyberpunk corner brackets - top left */
@@ -180,7 +247,7 @@ nav {
 .glitch-text {
   font-family: sans-serif;
   font-size: 80px;
-  font-weight: 50;
+  font-weight: 100;
   color: #1fbcc2;
   margin-bottom: 20px;
   letter-spacing: 2px;
@@ -216,10 +283,72 @@ nav {
 }
 
 .subtitle {
-  font-size: 20px;
-  color: #b0b0b0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1fbcc2;
   margin-bottom: 40px;
+  margin-top: 0;
   font-family: sans-serif;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.1s;
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Glitch animation - only plays when .glitching class is added */
+.subtitle.glitching {
+  animation: glitch-effect 0.5s;
+}
+
+/* Intense glitch effect for clicks - NO Y-axis movement */
+@keyframes glitch-effect {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5px, 0);
+    text-shadow: 3px 0 #ff00ff, -3px 0 #00ffff;
+  }
+  20% {
+    transform: translate(5px, 0);
+    text-shadow: -3px 0 #ff00ff, 3px 0 #00ffff;
+  }
+  30% {
+    transform: translate(-3px, 0);
+    text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+  }
+  40% {
+    transform: translate(3px, 0);
+    text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff;
+  }
+  50% {
+    transform: translate(-2px, 0);
+    text-shadow: 1px 0 #ff00ff, -1px 0 #00ffff;
+  }
+  60% {
+    transform: translate(2px, 0);
+    text-shadow: -1px 0 #ff00ff, 1px 0 #00ffff;
+  }
+  70% {
+    transform: translate(-1px, 0);
+    text-shadow: 2px 0 #1fbcc2, -2px 0 #ff00ff;
+  }
+  80% {
+    transform: translate(1px, 0);
+    text-shadow: -2px 0 #1fbcc2, 2px 0 #ff00ff;
+  }
+  90% {
+    transform: translate(-1px, 0);
+    text-shadow: 1px 0 #1fbcc2, -1px 0 #00ffff;
+  }
+  100% {
+    transform: translate(0, 0);
+    text-shadow: none;
+  }
 }
 
 .cta-button {
@@ -324,6 +453,9 @@ nav {
   position: relative;
   cursor: pointer;
   height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Cyberpunk corner brackets - top left */
@@ -388,6 +520,7 @@ nav {
   margin-bottom: 20px;
   line-height: 1.6;
   font-family: sans-serif;
+  flex-grow: 1;
 }
 
 /* ----- TECH TAGS ----- */
@@ -477,24 +610,27 @@ nav {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .social-links a {
   color: #1fbcc2;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 10px 25px;
-  border: 2px solid #1fbcc2;
+  font-size: 48px;
   transition: all 0.3s;
-  font-family: sans-serif;
+  position: relative;
+  display: inline-block;
 }
 
 .social-links a:hover {
-  background-color: #1fbcc2;
-  color: #0d0d0d;
+  color: #2dddea;
+  transform: translateY(-5px) scale(1.2);
+}
+
+.social-links a i {
+  display: block;
 }
 
 /* ----- FOOTER ----- */
@@ -533,11 +669,25 @@ footer p {
 
 @media (max-width: 768px) {
   .glitch-text {
-    font-size: 50px;
+    font-size: 60px;
   }
 
   .nav-links {
     gap: 15px;
+  }
+
+  .dropdown-menu {
+    min-width: 150px;
+    font-size: 14px;
+  }
+
+  .dropdown-menu a {
+    padding: 8px 15px;
+    text-align: center;
+  }
+
+  .dropdown-menu a:hover {
+    padding-left: 15px;
   }
 
   .section-title {
@@ -550,14 +700,6 @@ footer p {
 
   .section {
     padding: 60px 20px;
-  }
-
-  /* Responsive hero corner brackets */
-  .hero::before,
-  .hero::after {
-    width: 40px;
-    height: 40px;
-    border-width: 2px;
   }
 
   .hero-content {
@@ -575,22 +717,22 @@ footer p {
     border-width: 3px;
   }
 
-  .glitch-text {
-    font-size: 40px;
-  }
-
   .typing-cursor {
-    height: 40px;
-    transform: translateY(-4px);
-  }
-
-  .subtitle {
-    font-size: 16px;
+    height: 60px;
+    transform: translateY(-6px);
   }
 
   .cta-button {
     padding: 12px 30px;
     font-size: 14px;
+  }
+
+  .social-links {
+    gap: 25px;
+  }
+
+  .social-links a {
+    font-size: 36px;
   }
 }
 

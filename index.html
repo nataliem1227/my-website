@@ -9,19 +9,26 @@
     
     
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/304aa8570a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>
+<body id="top">
     
     <!-- Top Navigation Bar -->
     <nav>
         <div class="nav-content">
             <div class="logo">
-                <a href="index.html"><span class="logo-circle">NM</span></a>
+                <a href="#top"><span class="logo-circle">NM</span></a>
             </div>
             <div class="nav-links">
                 <a href="#about">About</a>
-                <a href="#works">Projects</a>
+                <div class="dropdown">
+                    <a href="#school-projects" class="dropdown-toggle">Projects</a>
+                    <div class="dropdown-menu">
+                        <a href="#school-projects">School Projects</a>
+                        <a href="#personal-projects">Personal Projects</a>
+                    </div>
+                </div>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -34,7 +41,6 @@
             <span class="corner-br"></span>
             <span class="corner-bl"></span>
             <div class="glitch-text"></div>
-            <p class="subtitle">Hello! Bonjour! </p>
         </div>
     </section>
 
@@ -43,17 +49,19 @@
         <h2 class="section-title">// ABOUT ME</h2>
         <div class="about-content">
             <p>
-                Hi, I'm Natalie. I am currently a third year student at the University of Toronto studying Computer Science, Mathematics, and French. 
-                I love learning both human and computer languages along with a passion for human-computer interaction.
+                Hi, I'm Natalie. I am currently a third year student at the University of Toronto studying Computer Science. I am also doing a minor in Math and French as a second language.
             </p>
             <p>
-                When I'm not coding, it is likely you will find me gaming.
+                I love learning both human and computer languages and have an interest in human-computer interaction. 👩‍💻
+            </p>
+            <p>
+                In my free time, I love playing video games and video editing. I also prefer my coffee black.
             </p>
         </div>
     </section>
 
-    <!-- Works Preview Section -->
-    <section id="works" class="section">
+    <!-- School Projects Section -->
+    <section id="school-projects" class="section">
         <h2 class="section-title">// SCHOOL PROJECTS</h2>
         
         <div class="projects-grid">
@@ -63,7 +71,7 @@
                     <div class="project-id">PR0J_001</div>
                     <h3 class="project-title">Treemaps</h3>
                     <p class="project-description">
-                        Interactive Python treemap tool using recursive algorithms to visualize hierarchical data as proportional rectangles with comprehensive testing.
+                        Recursive algorithm visualizing hierarchical data as proportional rectangles.
                     </p>
                     <div class="project-tech">
                         <span>Python</span>
@@ -79,53 +87,55 @@
                     <div class="project-id">PR0J_002</div>
                     <h3 class="project-title">Mewbile Tech Company</h3>
                     <p class="project-description">
-                        q
+                        Customer call analysis with map filtering and automated billing.
                     </p>
                     <div class="project-tech">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>API</span>
+                        <span>Python</span>
+                        <span>Pygame</span>
+                        <span>JSON</span>
                     </div>
                 </div>
             </a>
 
             <!-- Project Card 3 -->
-            <a href="project-paint.html" class="project-card-link">
+            <a href="paint.html" class="project-card-link">
                 <div class="project-card">
                     <div class="project-id">PR0J_003</div>
                     <h3 class="project-title">Paint Application</h3>
                     <p class="project-description">
-                        Describe.
+                        Desktop paint app with MVC architecture and extensible shape tools.
                     </p>
                     <div class="project-tech">
                         <span>Java</span>
-                        <span>Ollama</span>
+                        <span>JavaFX</span>
+                        <span>MVC</span>
                     </div>
                 </div>
             </a>
 
             <!-- Project Card 4 -->
-            <a href="project-myshell.html" class="project-card-link">
+            <a href="myshell.html" class="project-card-link">
                 <div class="project-card">
                     <div class="project-id">PR0J_004</div>
                     <h3 class="project-title">Myshell</h3>
                     <p class="project-description">
-                        Describe.
+                        Unix shell supporting pipes, background jobs, and signal handling.
                     </p>
                     <div class="project-tech">
                         <span>C</span>
                         <span>Bash</span>
+                        <span>Unix</span>
                     </div>
                 </div>
             </a>
 
             <!-- Project Card 5 -->
-            <a href="project-loyalty.html" class="project-card-link">
+            <a href="kushkoin.html" class="project-card-link">
                 <div class="project-card">
                     <div class="project-id">PR0J_005</div>
-                    <h3 class="project-title">Loyalty Program</h3>
+                    <h3 class="project-title">Kushback Loyalty</h3>
                     <p class="project-description">
-                        Describe.
+                        Rewards platform with QR transactions and role-based access control.
                     </p>
                     <div class="project-tech">
                         <span>Typescript</span>
@@ -136,12 +146,12 @@
             </a>
 
             <!-- Project Card 6 -->
-            <a href="project-invoicing.html" class="project-card-link">
+            <a href="savi.html" class="project-card-link">
                 <div class="project-card">
                     <div class="project-id">PR0J_006: SAVI FINANCE</div>
                     <h3 class="project-title">AI Invoicing System</h3>
                     <p class="project-description">
-                        Describe.
+                        AI assistant with RAG chatbot for natural-language invoice management.
                     </p>
                     <div class="project-tech">
                         <span>Typescript</span>
@@ -153,38 +163,45 @@
         </div>
     </section>
 
-    <!-- Works Preview Section -->
-    <section id="works" name="personal-projects" class="section">
+    <!-- Personal Projects Section -->
+    <section id="personal-projects" class="section">
         <h2 class="section-title">// PERSONAL PROJECTS</h2>
         
-
         <div class="projects-grid">
             <!-- Project Card 1 -->
-            <a href="projects/curaitor.html" class="project-card-link">
+            <a href="curaitor.html" class="project-card-link">
                 <div class="project-card">
-                    <div class="project-id">PR0J_001</div>
+                    <div class="project-id">PR0J_001: HACKATHON</div>
                     <h3 class="project-title">CurAItor</h3>
                     <div class="medal-badge">🏅</div>
                     <p class="project-description">
-                        Interactive Python treemap tool using recursive algorithms to visualize hierarchical data as proportional rectangles with comprehensive testing.
+                        AI art museum with personalized curation and 3D gallery experience.
                     </p>
                     <div class="project-tech">
+                        <span>React</span>
                         <span>Python</span>
-                        <span>Pytest</span>
-                        <span>Pygame</span>
+                        <span>OpenAI</span>
                     </div>
                 </div>
             </a>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
         <h2 class="section-title">// CONTACT</h2>
         <div class="contact-content">
-            <p>Want to work together? Let's connect!</p>
+            <p>Want to send me a message? Let's connect!</p>
             <div class="social-links">
-                <a href="https://github.com/nataliem1227">GitHub</a>
-                <a href="mailto:nataliem9807@gmail.com">Email me</a>
-                <a href="https://linkedin.com/in/nataliematchett">LinkedIn</a>
+                <a href="https://github.com/nataliem1227" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:nataliem9807@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://linkedin.com/in/nataliematchett" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -192,7 +209,7 @@
     <!-- Footer -->
     <footer>
         <p>© 2025 Natalie Matchett ☕</p>
-        <p class="credits">Inspired by <a href="https://www.cyberpunk.net/ca/en/" target="_blank">Cyberpunk 2077</a></p>
+        <p class="credits">Inspired by <a href="https://www.cyberpunk.net/ca/en/">Cyberpunk 2077</a></p>
     </footer>
 
     <script src="script.js"></script>
