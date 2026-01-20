@@ -347,6 +347,12 @@ body::before {
   margin: 40px 0;
 }
 
+.image-gallery p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #b0b0b0;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -404,7 +410,7 @@ body::before {
 }
 
 .gallery-caption {
-  color: #1fbcc2;
+  color: #b0b0b0;
   font-size: 14px;
   margin-top: 10px;
   text-align: center;
@@ -452,9 +458,9 @@ body::before {
 }
 
 .featured-caption {
-  color: #1fbcc2;
-  font-size: 16px;
-  margin-top: 15px;
+  color: #b0b0b0;
+  font-size: 14px;
+  margin-top: 10px;
   text-align: center;
   font-family: sans-serif;
 }
@@ -462,7 +468,7 @@ body::before {
 /* Two column image layout */
 .image-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin: 40px 0;
 }
@@ -640,3 +646,33 @@ body::before {
   background-color: #1fbcc2 !important;
   color: #0d0d0d !important;
 }
+
+/* ----- WORKFLOW SUBTITLES ----- */
+.workflow-subtitle {
+  color: #1fbcc2;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+.workflow-subtitle-web {
+  margin-top: 60px;
+}
+
+/* Figma row with larger boxes */
+.figma-row {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.figma-row .image-box {
+  padding: 35px;
+}
+
+.figma-row .image-box img {
+  height: auto;
+  max-height: 700px;
+}
+
+
