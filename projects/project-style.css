@@ -324,6 +324,7 @@ body::before {
   color: #1fbcc2;
   margin: 20px 0 30px 0;
   letter-spacing: 2px;
+  text-transform: none !important;
 }
 
 .project-content {
@@ -621,4 +622,21 @@ body::before {
 
 .project-section ul li {
   padding: 10px 0;
+}
+
+/* ----- CYBER BUTTON STYLING ----- */
+.cyber-btn {
+  padding: 20px 50px !important;
+  font-size: 18px !important;
+  font-family: sans-serif !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  margin-bottom: 20px !important;
+  color: #1fbcc2 !important;
+  border-color: #1fbcc2 !important;
+}
+
+.cyber-btn:hover {
+  background-color: #1fbcc2 !important;
+  color: #0d0d0d !important;
 }

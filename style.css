@@ -180,7 +180,7 @@ nav {
 
 /* ----- HERO SECTION ----- */
 .hero {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,7 +197,7 @@ nav {
   background-color: #1a1a1a;
   border: 2px solid #1fbcc2;
   border-radius: 8px;
-  padding: 60px 40px;
+  padding: 50px 30px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -316,6 +316,7 @@ nav {
   border: 3px solid #1fbcc2;
   transition: all 0.3s;
   font-family: sans-serif;
+  
 }
 
 .cta-button:hover {
@@ -766,6 +767,13 @@ body::before {
 .recents-footer .cyber-btn {
   padding: 20px 50px !important;
   font-size: 18px !important;
-  font-family: 'Rajdhani', 'Orbitron', system-ui, sans-serif !important;
+  font-family: sans-serif !important;
   text-decoration: none !important;
+  color: #1fbcc2 !important;
+  border-color: #1fbcc2 !important;
+}
+
+.recents-footer .cyber-btn:hover {
+  background-color: #1fbcc2 !important;
+  color: #0d0d0d !important;
 }
