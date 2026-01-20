@@ -74,12 +74,20 @@ nav {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
+  font-size: 16px;
   transition: color 0.3s;
   font-family: sans-serif;
 }
 
 .nav-links a:hover {
   color: #1fbcc2;
+}
+
+/* Active/selected nav link styling */
+.nav-links a.nav-active {
+  color: #1fbcc2;
+  border-bottom: 2px solid #1fbcc2;
+  padding-bottom: 3px;
 }
 
 /* Dropdown Menu */
@@ -251,7 +259,7 @@ nav {
   color: #1fbcc2;
   margin-bottom: 20px;
   letter-spacing: 2px;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1), 8px 8px 16px rgba(0, 0, 0, 0.9), 4px 4px 8px rgba(0, 0, 0, 0.8);
   display: inline-block;
 }
 
@@ -290,65 +298,11 @@ nav {
   margin-top: 0;
   font-family: sans-serif;
   position: relative;
-  cursor: pointer;
-  transition: all 0.1s;
   opacity: 1 !important;
   transform: translate(0, 0) !important;
   display: block;
   width: 100%;
   text-align: center;
-}
-
-/* Glitch animation - only plays when .glitching class is added */
-.subtitle.glitching {
-  animation: glitch-effect 0.5s;
-}
-
-/* Intense glitch effect for clicks - NO Y-axis movement */
-@keyframes glitch-effect {
-  0% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(-5px, 0);
-    text-shadow: 3px 0 #ff00ff, -3px 0 #00ffff;
-  }
-  20% {
-    transform: translate(5px, 0);
-    text-shadow: -3px 0 #ff00ff, 3px 0 #00ffff;
-  }
-  30% {
-    transform: translate(-3px, 0);
-    text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
-  }
-  40% {
-    transform: translate(3px, 0);
-    text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff;
-  }
-  50% {
-    transform: translate(-2px, 0);
-    text-shadow: 1px 0 #ff00ff, -1px 0 #00ffff;
-  }
-  60% {
-    transform: translate(2px, 0);
-    text-shadow: -1px 0 #ff00ff, 1px 0 #00ffff;
-  }
-  70% {
-    transform: translate(-1px, 0);
-    text-shadow: 2px 0 #1fbcc2, -2px 0 #ff00ff;
-  }
-  80% {
-    transform: translate(1px, 0);
-    text-shadow: -2px 0 #1fbcc2, 2px 0 #ff00ff;
-  }
-  90% {
-    transform: translate(-1px, 0);
-    text-shadow: 1px 0 #1fbcc2, -1px 0 #00ffff;
-  }
-  100% {
-    transform: translate(0, 0);
-    text-shadow: none;
-  }
 }
 
 .cta-button {
@@ -422,6 +376,14 @@ nav {
   max-width: 800px;
 }
 
+.about-content h2 {
+  color: #1fbcc2;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  text-transform: none !important;
+}
+
 .about-content p {
   color: #b0b0b0;
   font-size: 18px;
@@ -442,6 +404,11 @@ nav {
   text-decoration: none;
   color: inherit;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card-link:hover {
+  transform: translateY(-10px);
 }
 
 /* ----- PROJECT CARD ----- */
@@ -449,7 +416,7 @@ nav {
   background-color: #1a1a1a;
   border: 2px solid #1fbcc2;
   padding: 30px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
   position: relative;
   cursor: pointer;
   height: 100%;
@@ -482,13 +449,7 @@ nav {
   border-right: 3px solid #1fbcc2;
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(31, 188, 194, 0.3);
-}
-
 .project-card-link:hover .project-card {
-  transform: translateY(-10px);
   box-shadow: 0 0 30px rgba(31, 188, 194, 0.5);
   border-color: #2dddea;
 }
@@ -501,6 +462,7 @@ nav {
   letter-spacing: 1px;
   position: relative;
   padding-bottom: 10px;
+  text-transform: none !important;
 }
 
 /* Add bottom right corner bracket using description pseudo element */
@@ -734,6 +696,17 @@ footer p {
   .social-links a {
     font-size: 36px;
   }
+
+  .cyber-datastream {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cyber-datastream .hero-content {
+    width: 100%;
+  }
 }
 
 html {
@@ -777,4 +750,22 @@ body::before {
   50% {
     transform: translateY(-10px);
   }
+}
+
+/* ----- CYBER DATASTREAM CUSTOMIZATION ----- */
+.cyber-datastream {
+  background: rgba(13, 13, 13, 0.6) !important;
+}
+
+/* ----- RECENTS FOOTER ----- */
+.recents-footer {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.recents-footer .cyber-btn {
+  padding: 20px 50px !important;
+  font-size: 18px !important;
+  font-family: 'Rajdhani', 'Orbitron', system-ui, sans-serif !important;
+  text-decoration: none !important;
 }

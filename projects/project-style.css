@@ -67,18 +67,27 @@ nav {
 .nav-links {
   display: flex;
   gap: 30px;
+  align-items: center;
 }
 
 .nav-links a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
+  font-size: 16px;
   transition: color 0.3s;
   font-family: sans-serif;
 }
 
 .nav-links a:hover {
   color: #1fbcc2;
+}
+
+/* Active/selected nav link styling */
+.nav-links a.nav-active {
+  color: #1fbcc2;
+  border-bottom: 2px solid #1fbcc2;
+  padding-bottom: 3px;
 }
 
 /* ----- SECTIONS ----- */
@@ -386,6 +395,11 @@ body::before {
   height: auto;
   display: block;
   border: 1px solid rgba(31, 188, 194, 0.3);
+}
+
+/* Landscape styling for web workflow images */
+.gallery-item:has(img[alt*="Web Workflow"]) {
+  grid-column: span 2;
 }
 
 .gallery-caption {

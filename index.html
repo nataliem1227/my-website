@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Natalie Matchett</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/cybercore-css@latest/dist/cybercore.min.css" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -28,13 +29,7 @@
         </div>
         <div class="nav-links">
           <a href="#about">About</a>
-          <div class="dropdown">
-            <a href="#school-projects" class="dropdown-toggle">Projects</a>
-            <div class="dropdown-menu">
-              <a href="#school-projects">School Projects</a>
-              <a href="#personal-projects">Personal Projects</a>
-            </div>
-          </div>
+          <a href="projects.html">Works</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
@@ -42,11 +37,13 @@
 
     <!-- Hero/Welcome Section -->
     <section class="hero">
-      <div class="hero-content">
-        <span class="corner-tr"></span>
-        <span class="corner-br"></span>
-        <span class="corner-bl"></span>
-        <div class="glitch-text"></div>
+      <div class="cyber-datastream">
+        <div class="hero-content">
+          <span class="corner-tr"></span>
+          <span class="corner-br"></span>
+          <span class="corner-bl"></span>
+          <div class="glitch-text"></div>
+        </div>
       </div>
     </section>
 
@@ -54,9 +51,10 @@
     <section id="about" class="section">
       <h2 class="section-title">// ABOUT ME</h2>
       <div class="about-content">
+        <h2> Hello! Bonjour! 你好！</h2>
         <p>
-          Hi, I'm Natalie. I am currently a third year student at the University
-          of Toronto studying Computer Science with minors in Math and French.
+          I'm Natalie Matchett, a third year student at the University
+          of Toronto studying Computer Science. I am also pursuing minors in Math and French.
         </p>
         <p>
           I am fascinated by both human and computer languages, and I'm
@@ -66,79 +64,30 @@
       </div>
     </section>
 
-    <!-- School Projects Section -->
-    <section id="school-projects" class="section">
-      <h2 class="section-title">// SCHOOL PROJECTS</h2>
-
+    <!-- Recents Section -->
+    <section id="recents" class="section">
+      <h2 class="section-title">// RECENTS</h2>
       <div class="projects-grid">
         <!-- Project Card 1 -->
-        <a href="projects/treemaps.html" class="project-card-link">
+        <a href="projects.html#school-projects" class="project-card-link">
           <div class="project-card">
-            <div class="project-id">PR0J_001</div>
-            <h3 class="project-title">Treemaps</h3>
+            <div class="project-id">PR0J_006: SAVI FINANCE</div>
+            <h3 class="project-title">AI Invoicing System</h3>
             <p class="project-description">
-              Recursive algorithm visualizing hierarchical data as proportional
-              rectangles.
+              AI assistant with RAG chatbot for natural-language invoice
+              management.
             </p>
             <div class="project-tech">
-              <span>Python</span>
-              <span>Pytest</span>
-              <span>Pygame</span>
+              <span>Typescript</span>
+              <span>Go</span>
+              <span>React Native</span>
+              <span>Figma</span>
             </div>
           </div>
         </a>
 
         <!-- Project Card 2 -->
-        <a href="projects/mewbile.html" class="project-card-link">
-          <div class="project-card">
-            <div class="project-id">PR0J_002</div>
-            <h3 class="project-title">Mewbile Tech Company</h3>
-            <p class="project-description">
-              Customer call analysis with map filtering and automated billing.
-            </p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>Pygame</span>
-              <span>JSON</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Project Card 3 -->
-        <a href="projects/paint.html" class="project-card-link">
-          <div class="project-card">
-            <div class="project-id">PR0J_003</div>
-            <h3 class="project-title">Paint Application</h3>
-            <p class="project-description">
-              Desktop paint app with MVC architecture and extensible shape
-              tools.
-            </p>
-            <div class="project-tech">
-              <span>Java</span>
-              <span>JavaFX</span>
-              <span>MVC</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Project Card 4 -->
-        <a href="projects/myshell.html" class="project-card-link">
-          <div class="project-card">
-            <div class="project-id">PR0J_004</div>
-            <h3 class="project-title">MyShell</h3>
-            <p class="project-description">
-              Unix shell supporting pipes, background jobs, and signal handling.
-            </p>
-            <div class="project-tech">
-              <span>C</span>
-              <span>Bash</span>
-              <span>Unix</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Project Card 5 -->
-        <a href="projects/kushkoin.html" class="project-card-link">
+        <a href="projects.html#school-projects" class="project-card-link">
           <div class="project-card">
             <div class="project-id">PR0J_005</div>
             <h3 class="project-title">Kushback Loyalty</h3>
@@ -154,34 +103,10 @@
           </div>
         </a>
 
-        <!-- Project Card 6 -->
-        <a href="projects/savi.html" class="project-card-link">
+        <!-- Project Card 3 -->
+        <a href="projects.html#personal-projects" class="project-card-link">
           <div class="project-card">
-            <div class="project-id">PR0J_006: SAVI FINANCE</div>
-            <h3 class="project-title">AI Invoicing System</h3>
-            <p class="project-description">
-              AI assistant with RAG chatbot for natural-language invoice
-              management.
-            </p>
-            <div class="project-tech">
-              <span>Typescript</span>
-              <span>Go</span>
-              <span>React Native</span>
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- Personal Projects Section -->
-    <section id="personal-projects" class="section">
-      <h2 class="section-title">// PERSONAL PROJECTS</h2>
-
-      <div class="projects-grid">
-        <!-- Project Card 1 -->
-        <a href="projects/curaitor.html" class="project-card-link">
-          <div class="project-card">
-            <div class="project-id">PR0J_001: HACKATHON</div>
+            <div class="project-id">HACK_001: GEN AI GENESIS </div>
             <h3 class="project-title">CurAItor</h3>
             <div class="medal-badge">🏅</div>
             <p class="project-description">
@@ -195,6 +120,9 @@
             </div>
           </div>
         </a>
+      </div>
+      <div class="recents-footer">
+        <a href="projects.html" class="cyber-btn">View More Projects</a>
       </div>
     </section>
 
