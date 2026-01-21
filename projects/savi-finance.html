@@ -1,131 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- Basic page info -->
-    <meta charset="UTF-8">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Invoicing System - Natalie Matchett</title>
-    
-    <link rel="stylesheet" href="https://unpkg.com/cybercore-css@latest/dist/cybercore.min.css" />
-    <link rel="stylesheet" href="project-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/cybercore-css@latest/dist/cybercore.min.css"
+    />
+    <link rel="stylesheet" href="project-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body id="top">
     <!-- Top Navigation Bar -->
     <nav>
-        <div class="nav-content">
-            <div class="logo">
-                <a href="../index.html"><span class="logo-circle">NM</span></a>
-            </div>
-            <div class="nav-links">
-                <a href="../index.html#about">About</a>
-                <a href="../projects.html" class="nav-active">Works</a>
-                <a href="../index.html#contact">Contact</a>
-            </div>
+      <div class="nav-content">
+        <div class="logo">
+          <a href="../index.html"><span class="logo-circle">NM</span></a>
         </div>
+        <div class="nav-links">
+          <a href="../index.html#about">About</a>
+          <a href="../projects.html" class="nav-active">Works</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
+      </div>
     </nav>
 
     <!-- Project Detail Section -->
     <section class="section project-detail">
-        <a href="../projects.html" class="cyber-btn">← Back to Works</a>
-        
-        <!-- Project Header with Striped Box -->
-        <div class="project-header">
-            <span class="project-header-corner-bl"></span>
-            <span class="project-header-corner-br"></span>
-            <div class="project-header-content">
-                <div class="project-header-text">
-                    <div class="project-id">PR0J_006: SAVI FINANCE</div>
-                    <h1 class="project-detail-title">AI Invoicing System</h1>
-                    <div class="project-tech">
-                        <span>Typescript</span>
-                        <span>React Native</span>
-                        <span>Golang</span>
-                        <span>Graphql</span>
-                        <span>Jira</span>
-                        <span>Confluence</span>
-                        <span>Expo</span>
-                        <span>RAG</span>
-                    </div>
-                </div>
-                <a href="https://financesavi.com/" class="project-header-logo">
-                    <img src="../images/savi-finance/savi-logo.webp" alt="Savi Finance Logo">
-                </a>
+      <a href="../projects.html" class="cyber-btn">← Back to Works</a>
+
+      <!-- Project Header with Striped Box -->
+      <div class="project-header">
+        <span class="project-header-corner-bl"></span>
+        <span class="project-header-corner-br"></span>
+        <div class="project-header-content">
+          <div class="project-header-text">
+            <div class="project-id">PR0J_006: SAVI FINANCE</div>
+            <h1 class="project-detail-title">AI Invoicing System</h1>
+            <div class="project-tech">
+              <span>Typescript</span>
+              <span>React Native</span>
+              <span>Golang</span>
+              <span>Graphql</span>
+              <span>Jira</span>
+              <span>Confluence</span>
+              <span>Expo</span>
+              <span>RAG</span>
             </div>
+          </div>
+          <a href="https://financesavi.com/" class="project-header-logo">
+            <img
+              src="../images/savi-finance/savi-logo.webp"
+              alt="Savi Finance Logo"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="project-content">
+        <!-- Overview Section -->
+        <div class="project-section">
+          <h2 class="section-title">// OVERVIEW</h2>
+          <p>
+            AI-driven financial assistant with Golang backend and RAG-based
+            chatbot supporting natural-language CRUD operations, batch invoice
+            processing, and automated agent-to-human workflows for invoicing and
+            scheduling.
+          </p>
         </div>
 
-        <div class="project-content">
-            <!-- Overview Section -->
-            <div class="project-section">
-                <h2 class="section-title">// OVERVIEW</h2>
-                <p>AI-driven financial assistant with Golang backend and RAG-based chatbot supporting natural-language CRUD operations, batch invoice processing, and automated agent-to-human workflows for invoicing and scheduling.</p>
-            </div>
+        <!-- Image Gallery - Multiple Screenshots -->
+        <div class="image-gallery">
+          <h2 class="section-title">// DEVELOPMENT</h2>
+          <p>
+            As the frontend team lead for the CRUD and invoicing system, my
+            primary role was designing and fixing the mobile Figma workflows. I
+            also implemented this functionality in the final stage of the web
+            app.
+          </p>
+          <p>
+            For my backend role, I built a RAG pipeline for editing an invoice,
+            creating the tool and adding batch editing/update invoices
+            functionality.
+          </p>
 
-            <!-- Image Gallery - Multiple Screenshots -->
-            <div class="image-gallery">
-                <h2 class="section-title">// DEVELOPMENT</h2>
-                <p>As the frontend team lead for the CRUD and invoicing system, my primary role was designing and fixing the mobile Figma workflows. I also implemented this functionality in the final stage of the web app.</p>
-                <p>For my backend role, I built a RAG pipeline for editing an invoice, creating the tool and adding batch editing/update invoices functionality.</p>
-                
-                <!-- Mobile Workflows Side by Side -->
-                <h3 class="workflow-subtitle">Mobile Workflows</h3>
-                <div class="image-row">
-                    <div class="image-box">
-                        <img src="../images/savi-finance/create_invoice.png" alt="Create Invoice">
-                        <p class="image-box-caption">Create Invoice</p>
-                    </div>
-                    <div class="image-box">
-                        <img src="../images/savi-finance/edit_invoice.png" alt="Edit Invoice">
-                        <p class="image-box-caption">Edit Invoice</p>
-                    </div>
-                    <div class="image-box">
-                        <img src="../images/savi-finance/delete_invoice.png" alt="Delete Invoice">
-                        <p class="image-box-caption">Delete Invoice</p>
-                    </div>
-                    <div class="image-box">
-                        <img src="../images/savi-finance/list_invoices.png" alt="List Invoices">
-                        <p class="image-box-caption">List Invoices</p>
-                    </div>
-                </div>
-                <div class="image-row figma-row">
-                    <div class="image-box">
-                        <img src="../images/savi-finance/old_mobile_workflow.png" alt="Old Mobile Workflow">
-                        <p class="image-box-caption">Figma Mockup Design</p>
-                    </div>
-                    <div class="image-box">
-                        <img src="../images/savi-finance/new_mobile_workflow.png" alt="New Mobile Workflow">
-                        <p class="image-box-caption">Figma Final Mobile Workflow</p>
-                    </div>
-                </div>
-
-                <!-- Web Workflows Top and Bottom -->
-                <h3 class="workflow-subtitle workflow-subtitle-web">Web Workflows</h3>
-                <div class="featured-image">
-                    <img src="../images/savi-finance/old_web_workflow.png" alt="Old Web Workflow">
-                    <p class="featured-caption">Old Web Workflow</p>
-                </div>
-                <div class="featured-image">
-                    <img src="../images/savi-finance/new_web_workflow.png" alt="New Web Workflow">
-                    <p class="featured-caption">New Web Workflow</p>
-                </div>
+          <!-- Mobile Workflows Side by Side -->
+          <h3 class="workflow-subtitle">Mobile Workflows</h3>
+          <div class="image-row">
+            <div class="image-box">
+              <img
+                src="../images/savi-finance/create_invoice.png"
+                alt="Create Invoice"
+              />
+              <p class="image-box-caption">Create Invoice</p>
             </div>
-
-            <!-- Project Links -->
-            <div class="project-links-detail">
-                <a href="https://financesavi.com/" class="cyber-btn">Visit Savi Finance →</a>
-                <a href="https://youtu.be/TOU432_dg64?si=DVdxb54QByf6fPkJ" class="cyber-btn">View Live Demo →</a>
+            <div class="image-box">
+              <img
+                src="../images/savi-finance/edit_invoice.png"
+                alt="Edit Invoice"
+              />
+              <p class="image-box-caption">Edit Invoice</p>
             </div>
+            <div class="image-box">
+              <img
+                src="../images/savi-finance/delete_invoice.png"
+                alt="Delete Invoice"
+              />
+              <p class="image-box-caption">Delete Invoice</p>
+            </div>
+            <div class="image-box">
+              <img
+                src="../images/savi-finance/list_invoices.png"
+                alt="List Invoices"
+              />
+              <p class="image-box-caption">List Invoices</p>
+            </div>
+          </div>
+          <div class="image-row figma-row">
+            <div class="image-box">
+              <img
+                src="../images/savi-finance/old_mobile_workflow.png"
+                alt="Old Mobile Workflow"
+              />
+              <p class="image-box-caption">Figma Mockup Design</p>
+            </div>
+            <div class="image-box">
+              <img
+                src="../images/savi-finance/new_mobile_workflow.png"
+                alt="New Mobile Workflow"
+              />
+              <p class="image-box-caption">Figma Final Mobile Workflow</p>
+            </div>
+          </div>
+
+          <!-- Web Workflows Top and Bottom -->
+          <h3 class="workflow-subtitle workflow-subtitle-web">Web Workflows</h3>
+          <div class="featured-image">
+            <img
+              src="../images/savi-finance/old_web_workflow.png"
+              alt="Old Web Workflow"
+            />
+            <p class="featured-caption">Old Web Workflow</p>
+          </div>
+          <div class="featured-image">
+            <img
+              src="../images/savi-finance/new_web_workflow.png"
+              alt="New Web Workflow"
+            />
+            <p class="featured-caption">New Web Workflow</p>
+          </div>
         </div>
+
+        <!-- Project Links -->
+        <div class="project-links-detail">
+          <a href="https://financesavi.com/" class="cyber-btn"
+            >Visit Savi Finance →</a
+          >
+          <a
+            href="https://youtu.be/TOU432_dg64?si=DVdxb54QByf6fPkJ"
+            class="cyber-btn"
+            >View Live Demo →</a
+          >
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Natalie Matchett</p>
-        <p class="credits">Inspired by <a href="https://www.cyberpunk.net/ca/en/" >Cyberpunk 2077</a></p>
+      <p>© 2025 Natalie Matchett</p>
+      <p class="credits">
+        Inspired by
+        <a href="https://www.cyberpunk.net/ca/en/">Cyberpunk 2077</a>
+      </p>
     </footer>
 
+    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+
     <script src="../script.js"></script>
-</body>
+  </body>
 </html>
